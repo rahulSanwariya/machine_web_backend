@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS users (
     created_at  DATE,
     updated_at  DATE,
     PRIMARY KEY (id)
-) ENGINE=InnoDB;
+)
 
 -- ─────────────────────────────────────────────────────────────
 -- Refresh Tokens Table
@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS refresh_tokens (
     user_id     BIGINT          NOT NULL,
     PRIMARY KEY (id),
     CONSTRAINT fk_refresh_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
-) ENGINE=InnoDB;
+)
 
 -- ─────────────────────────────────────────────────────────────
 -- Password Reset Tokens Table
@@ -37,4 +37,4 @@ CREATE TABLE IF NOT EXISTS password_reset_tokens (
     user_id     BIGINT          NOT NULL,
     PRIMARY KEY (id),
     CONSTRAINT fk_reset_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
-) ENGINE=InnoDB;
+)
