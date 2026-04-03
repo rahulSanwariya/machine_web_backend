@@ -25,6 +25,13 @@ public enum ErrorCode {
     IMAGE_NOT_FOUND         (HttpStatus.NOT_FOUND,             "Image not found"),
     IMAGE_SAVE_FAILED       (HttpStatus.INTERNAL_SERVER_ERROR, "Failed to save image"),
 
+    // ── Cart / Order Errors ───────────────────────────────────────────────
+    CART_ITEM_NOT_FOUND     (HttpStatus.NOT_FOUND,             "Cart item not found"),
+    OUT_OF_STOCK            (HttpStatus.BAD_REQUEST,           "Machine is out of stock"),
+    CART_EMPTY              (HttpStatus.BAD_REQUEST,           "Cart is empty"),
+    ORDER_NOT_FOUND         (HttpStatus.NOT_FOUND,             "Order not found"),
+    UNAUTHORIZED_ACCESS     (HttpStatus.FORBIDDEN,             "You are not authorized to perform this action"),
+
     // ── Validation / General ──────────────────────────────────────────────
     VALIDATION_FAILED       (HttpStatus.BAD_REQUEST,           "Validation failed"),
     INTERNAL_SERVER_ERROR   (HttpStatus.INTERNAL_SERVER_ERROR, "An unexpected error occurred");
