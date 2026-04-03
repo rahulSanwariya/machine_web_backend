@@ -1,6 +1,6 @@
 package com.project.machiness_backend.auth.config;
 
-import com.project.machiness_backend.auth.config.security.CustomUserDetailsService;
+import com.project.machiness_backend.auth.security.CustomUserDetailsService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
